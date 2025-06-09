@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ライフゲーム</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        .field-size {
+            margin-right: 10px;
+        }
+        #gameField {
+            border: 1px solid #ccc;
+        }
+        .slider-container {
+            margin: 20px 0;
+        }
+        .button-group {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ライフゲーム</h1>
+    <div class="controls">
+        <input type="number" id="fieldSize" class="field-size" value="60" min="10" max="200">
+        <button id="goButton">Go</button>
+        <button id="resetButton">Reset</button>
+        <div class="button-group">
+            <button id="randomButton">Random</button>
+            <button id="autoButton">Auto</button>
+        </div>
+    </div>
+    <div class="slider-container">
+        <label for="speedSlider">速度調整:</label>
+        <input type="range" id="speedSlider" min="100" max="1000" value="500">
+        <span id="speedValue">500ms</span>
+    </div>
+    <canvas id="gameField"></canvas>
+    <script src="game.js"></script>
+</body>
+</html> 
